@@ -1,4 +1,4 @@
-@extends('layouts.vangography')
+@extends('layouts.quantumography')
 @php 
     $pageTitle = "Register"; 
 @endphp

@@ -14,9 +14,9 @@ class VangographyPlanController extends Controller
      */
     public function index()
     {
-        $pageTitle = 'Vangonography Plans';
+        $pageTitle = 'Quantumography Plans';
         $plans = VangographyPlan::all();
-        return view('dashboard.vangography.plans.index', compact('plans','pageTitle'));
+        return view('dashboard.quantumography.plans.index', compact('plans','pageTitle'));
     }
 
     /**
@@ -26,8 +26,8 @@ class VangographyPlanController extends Controller
      */
     public function create()
     {
-        $pageTitle = 'Vangonography Plan create';
-        return view('dashboard.vangography.plans.create',compact('pageTitle'));
+        $pageTitle = 'Quantumography Plan create';
+        return view('dashboard.quantumography.plans.create',compact('pageTitle'));
 
     }
 
@@ -40,24 +40,24 @@ class VangographyPlanController extends Controller
     public function store(Request $request)
     {
         $data=$request->validate([
-            'plan_name' => 'required|unique:vangography_plans,plan_name',
-            'size' => 'numeric|required|min:0.5|unique:vangography_plans,size',
+            'plan_name' => 'required|unique:quantumography_plans,plan_name',
+            'size' => 'numeric|required|min:0.5|unique:quantumography_plans,size',
             'price' => 'required',
         ]);
 
         VangographyPlan::create($data);
 
-        return redirect()->route('dashboard.vangography.plan.index')->with('success', 'Plan created successfully.');
+        return redirect()->route('dashboard.quantumography.plan.index')->with('success', 'Plan created successfully.');
   
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\VangographyPlan  $vangographyPlan
+     * @param  \App\Models\VangographyPlan  $quantumographyPlan
      * @return \Illuminate\Http\Response
      */
-    public function show(VangographyPlan $vangographyPlan)
+    public function show(VangographyPlan $quantumographyPlan)
     {
         //
     }
@@ -65,45 +65,45 @@ class VangographyPlanController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\VangographyPlan  $vangographyPlan
+     * @param  \App\Models\VangographyPlan  $quantumographyPlan
      * @return \Illuminate\Http\Response
      */
-    public function edit(VangographyPlan $vangographyPlan)
+    public function edit(VangographyPlan $quantumographyPlan)
     {
-        $pageTitle = 'Vangonography Plan Edit';
-        return view('dashboard.vangography.plans.edit', compact('vangographyPlan','pageTitle'));
+        $pageTitle = 'Quantumography Plan Edit';
+        return view('dashboard.quantumography.plans.edit', compact('quantumographyPlan','pageTitle'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\VangographyPlan  $vangographyPlan
+     * @param  \App\Models\VangographyPlan  $quantumographyPlan
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, VangographyPlan $vangographyPlan)
+    public function update(Request $request, VangographyPlan $quantumographyPlan)
     {
        $data=$request->validate([
-            'plan_name' => 'required|unique:vangography_plans,plan_name,' . $vangographyPlan->id,
-            'size' => 'required|numeric|min:0.5|unique:vangography_plans,size,' . $vangographyPlan->id,
+            'plan_name' => 'required|unique:quantumography_plans,plan_name,' . $quantumographyPlan->id,
+            'size' => 'required|numeric|min:0.5|unique:quantumography_plans,size,' . $quantumographyPlan->id,
             'price' => 'required',
         ]);
 
-        $vangographyPlan->update($data);
+        $quantumographyPlan->update($data);
 
-        return redirect()->route('dashboard.vangography.plan.index')->with('success', 'Plan updated successfully.');
+        return redirect()->route('dashboard.quantumography.plan.index')->with('success', 'Plan updated successfully.');
    
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\VangographyPlan  $vangographyPlan
+     * @param  \App\Models\VangographyPlan  $quantumographyPlan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(VangographyPlan $vangographyPlan)
+    public function destroy(VangographyPlan $quantumographyPlan)
     {
-        $vangographyPlan->delete();
-        return redirect()->route('dashboard.vangography.plan.index')->with('success', 'Plan deleted successfully.');
+        $quantumographyPlan->delete();
+        return redirect()->route('dashboard.quantumography.plan.index')->with('success', 'Plan deleted successfully.');
     }
 }

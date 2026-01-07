@@ -1,4 +1,4 @@
-@extends('layouts.vangography')
+@extends('layouts.quantumography')
 @section('content')
 <section class="quantum-bg-section content two ptb-80 d-flex align-items-center justify-content-center downloadDiv">
     <div class="container text-center">
@@ -13,7 +13,7 @@
                                     class="max-95px"> -->
                                 Download it
                             </a>
-                            <a href="{{ route('vangography.decode') }}" class="px-5 btn--base btn-blue-vanu">Go to Decode <i class="fas fa-arrow-right ml-2"></i></a>
+                            <a href="{{ route('quantumography.decode') }}" class="px-5 btn--base btn-blue-vanu">Go to Decode <i class="fas fa-arrow-right ml-2"></i></a>
                         </div>
                     </div>
                 </div>

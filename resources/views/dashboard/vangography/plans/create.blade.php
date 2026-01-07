@@ -7,7 +7,7 @@
                     <h5 class="mb-0">{{$pageTitle}}</h5>
                 </div>
                 <div class="card-body bg-light">
-                    <form method="POST" action="{{ route('dashboard.vangography.plan.store') }}" class="">
+                    <form method="POST" action="{{ route('dashboard.quantumography.plan.store') }}" class="">
                         @csrf
                         <div class="form-group">
                             <label for="plan_name">Plan Name</label>

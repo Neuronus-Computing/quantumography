@@ -76,11 +76,6 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'ip' => $ip, // Save the user's IP address to the 'ip' field
         ]);
-        $user->apiKeySecret()->create([
-            'api_key' => 'pk_'.$api_key,
-            'secret_key' => 'sk_'.$secret_key,
-        ]);
-        EnlargeImage::where('user_ip' , $user->ip)->update(['user_id'=>$user->id]);
         return $user;
     }
 }

@@ -13,7 +13,7 @@ class CreateVangographyPlansTable extends Migration
      */
     public function up()
     {
-        Schema::create('vangography_plans', function (Blueprint $table) {
+        Schema::create('quantumography_plans', function (Blueprint $table) {
             $table->id();
             $table->string('plan_name')->unique()->nullable();
             $table->double('size')->unique()->nullable();
@@ -29,6 +29,6 @@ class CreateVangographyPlansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vangography_plans');
+        Schema::dropIfExists('quantumography_plans');
     }
 }

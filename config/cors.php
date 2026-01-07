@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'paths' => ['api/*',  '/upload-file','/vangonography_encode','sanctum/csrf-cookie'],
+    'paths' => ['api/*',  '/upload-file','/quantumography_encode','sanctum/csrf-cookie'],
 
     'allowed_methods' => ['*'],
 

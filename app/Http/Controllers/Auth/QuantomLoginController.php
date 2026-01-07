@@ -21,7 +21,7 @@ class QuantomLoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = "/vangonography";
+    protected $redirectTo = "/";
 
     protected $externalAuthService;
 
@@ -149,7 +149,7 @@ class QuantomLoginController extends Controller
      */
     protected function redirectAfterLogin()
     {
-        if (session()->has('url.intended') && strpos(session()->get('url.intended'), '/vangonography') !== false){
+        if (session()->has('url.intended') && strpos(session()->get('url.intended'), '/quantumography') !== false){
             redirect()->intended($this->redirectTo);
         }
         else{
@@ -174,13 +174,13 @@ class QuantomLoginController extends Controller
         if (Auth::guard('seed')->check()) {
             return $this->redirectAfterLogin();
         }
-        return view('vangography.important-note');
+        return view('quantumography.important-note');
     }
     public function logout(Request $request)
     {
         Auth::guard('seed')->logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('vangography.note');
+        return redirect()->route('quantumography.note');
     }
 }

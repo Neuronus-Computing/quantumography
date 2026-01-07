@@ -1,16 +1,16 @@
 {{-- @php
 $layout = '';
 @endphp --}}
-{{-- @if (session()->has('url.intended') && strpos(session()->get('url.intended'), '/vangonography') !== false)
+{{-- @if (session()->has('url.intended') && strpos(session()->get('url.intended'), '/quantumography') !== false)
     @php
-        $layout = 'vangography';
+        $layout = 'quantumography';
     @endphp
 @else
     @php
         $layout = 'app';
     @endphp
 @endif --}}
-@extends('layouts.vangography')@php $pageTitle = "Login" @endphp
+@extends('layouts.quantumography')@php $pageTitle = "Login" @endphp
 @section('content')
 <style>
     .main-section-auth h2,

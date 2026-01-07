@@ -7,25 +7,25 @@
                     <h5 class="mb-0">{{$pageTitle}}</h5>
                 </div>
                 <div class="card-body bg-light">
-                    <form method="POST" action="{{ route('dashboard.vangography.plan.update', $vangographyPlan->id) }}">
+                    <form method="POST" action="{{ route('dashboard.quantumography.plan.update', $quantumographyPlan->id) }}">
                         @csrf
                         @method('PUT')
 
                         <div class="form-group">
                             <label for="plan_name">Plan Name</label>
                             <input type="text" name="plan_name" id="plan_name" class="form-control"
-                                value="{{ $vangographyPlan->plan_name }}" required>
+                                value="{{ $quantumographyPlan->plan_name }}" required>
                         </div>
 
                         <div class="form-group">
                             <label for="size">Secret File Size (MB)</label>
                             <input type="text" name="size" id="size" class="form-control"
-                                value="{{ $vangographyPlan->size }}" required>
+                                value="{{ $quantumographyPlan->size }}" required>
                         </div>
                         <div class="form-group">
                             <label for="price">Price ($)</label>
                             <input type="number" name="price" id="price" class="form-control"
-                            value="{{ $vangographyPlan->price }}" required>
+                            value="{{ $quantumographyPlan->price }}" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Update Plan</button>
                     </form>

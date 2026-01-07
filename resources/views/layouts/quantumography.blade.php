@@ -56,7 +56,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-    {{-- <link rel="stylesheet" href="{{ asset('js/vangography/app.css') }}"> --}}
+    {{-- <link rel="stylesheet" href="{{ asset('js/quantumography/app.css') }}"> --}}
 </head>
 <body>
 <style>
@@ -309,7 +309,7 @@
     <img src="{{ asset('assets/images/quantumography/logowordmark.svg')}}" alt="logo" class="logo-quantum">
 </div>
 <section class="quantum-bg-section two ptb-30">
-    <a href="{{route('vangography.index')}}">
+    <a href="{{route('index')}}">
     <img src="{{ asset('assets/images/quantumography/logowordmark.svg')}}" alt="logo" class="logo-quantum">
     </a>
     <video autoplay muted loop playsinline id="video-bg">
@@ -392,7 +392,7 @@
             }
         }
     </script>
-    <script src="{{asset('js/vangography/vangography.js')}}"></script>
+    <script src="{{asset('js/quantumography/quantumography.js')}}"></script>
     <script>
         Vue.http.headers.common['X-CSRF-TOKEN'] = $('meta[name="csrf-token"]').attr('content');
         Vue.config.devtools = true;
