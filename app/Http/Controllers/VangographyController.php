@@ -12,23 +12,23 @@ class VangographyController extends Controller
 {
     public $filename ='';
     public function index(){
-        $pageTitle = "Vangonography";
+        $pageTitle = "Quantumography";
         $plans = VangographyPlan::all();
         $userData= session()->get('userData') ?? null;
-        return view('vangography.index', compact('pageTitle','plans','userData'));
+        return view('quantumography.index', compact('pageTitle','plans','userData'));
     }
     public function encodeIndex()
     {
-        $pageTitle = "Vangonography Encode";
-        $submenu=['link'=>route('vangography.index'), 'title'=>"Vangonography"];
+        $pageTitle = "Quantumography Encode";
+        $submenu=['link'=>route('index'), 'title'=>"Quantumography"];
         $plans = VangographyPlan::where('price', '!=' ,0)->get();
-        return view('vangography.encode',compact('pageTitle','submenu','plans'));
+        return view('quantumography.encode',compact('pageTitle','submenu','plans'));
     }
     public function decodeIndex()
     {
-        $pageTitle = "Vangonography Decode";
-        $submenu=['link'=>route('vangography.index'), 'title'=>"Vangonography"];
-        return view('vangography.decode',compact('pageTitle','submenu'));
+        $pageTitle = "Quantumography Decode";
+        $submenu=['link'=>route('index'), 'title'=>"Quantumography"];
+        return view('quantumography.decode',compact('pageTitle','submenu'));
     }
 
     // public function encode(Request $request){
@@ -245,7 +245,7 @@ class VangographyController extends Controller
     //         imagedestroy($imageCrypto);
     //         if (!$path) {
     //             return response()->json([
-    //                 'url' => route('vangography.payment.success', $encryptedFile->id),
+    //                 'url' => route('quantumography.payment.success', $encryptedFile->id),
     //                 'path'=>$path
     //             ],200)
     //             ->header('Access-Control-Allow-Origin', '*')

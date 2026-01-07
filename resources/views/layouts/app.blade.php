@@ -360,17 +360,9 @@ End Banner
                                                 <a class="dropdown-item" href="http://ghostmail.neuronus.net">
                                                     <span class="elementor-icon-list-text">Ghost Mail</span>
                                                 </a>
-                                                <a class="dropdown-item" href="{{route('image.index')}}">
-                                                    <span class="elementor-icon-list-text">Image Enlarger</span>
-                                                </a>
-                                                <a class="dropdown-item" href="{{route('txt.pass.index')}}">
-                                                    <span class="elementor-icon-list-text">TxtPass</span>
-                                                </a>
-                                                <a class="dropdown-item" href="{{route('file.pass.index')}}">
-                                                    <span class="elementor-icon-list-text">FILEPass</span>
-                                                </a>
-                                                <a class="dropdown-item" href="{{route('vangography.index')}}">
-                                                    <span class="elementor-icon-list-text">vangonography</span>
+                                               
+                                                <a class="dropdown-item" href="{{route('index')}}">
+                                                    <span class="elementor-icon-list-text">quantumography</span>
                                                 </a>
                                             </div>
                                         </div>

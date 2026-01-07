@@ -8,7 +8,7 @@
                     <h5 class="fs-0 mb-0 text-nowrap py-2 py-xl-0">{{$pageTitle}}</h5>
                 </div>
                 <div class="col-6 col-sm-auto ml-auto text-right pl-0">
-                    <a href={{route('dashboard.vangography.plan.create')}} class="btn btn-primary btn-sm">Add New Plan</a>
+                    <a href={{route('dashboard.quantumography.plan.create')}} class="btn btn-primary btn-sm">Add New Plan</a>
                 </div>
             </div>
         </div>
@@ -32,11 +32,11 @@
                                 <td class="align-middle">{{ $plan->size }} MB</td>
                                 <td class="align-middle">${{ $plan->price}} </td>
                                 <td class="align-middle">
-                                    <a href="{{ route('dashboard.vangography.plan.edit', $plan->id) }}"
+                                    <a href="{{ route('dashboard.quantumography.plan.edit', $plan->id) }}"
                                         class="btn btn-primary btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <form action="{{ route('dashboard.vangography.plan.destroy', $plan->id) }}" method="POST"
+                                    <form action="{{ route('dashboard.quantumography.plan.destroy', $plan->id) }}" method="POST"
                                         style="display: inline;">
                                         @csrf
                                         @method('DELETE')

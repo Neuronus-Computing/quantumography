@@ -22,13 +22,13 @@ class VangographyPaymentController extends Controller
     {
         if(session()->has('fileDetails')){
             $pageTitle = "Checkout page";
-            $submenu=['link'=>route('vangography.index'), 'title'=>"Vangonography"];
+            $submenu=['link'=>route('index'), 'title'=>"Quantumography"];
             $details =session()->get('fileDetails');
             $orderNumber = session()->get('order_no');
-            return view('vangography.checkout_form', compact('details', 'pageTitle','orderNumber','submenu'));
+            return view('quantumography.checkout_form', compact('details', 'pageTitle','orderNumber','submenu'));
         }
         else{
-            return redirect()->route('vangography.encode')->with('error','Please select your files to encrypt.');
+            return redirect()->route('quantumography.encode')->with('error','Please select your files to encrypt.');
         }
     }
     public function processPayment(Request $request)
@@ -72,7 +72,7 @@ class VangographyPaymentController extends Controller
                 'metadata' => [
                     'cardholder_name' => $request->input('name'),
                 ],
-                'return_url' => route('vangography.encode')
+                'return_url' => route('quantumography.encode')
             ]);
             // Verify that the payment intent is successful
             if ($paymentIntent->status === 'succeeded') {
@@ -99,18 +99,18 @@ class VangographyPaymentController extends Controller
     public function success(Request $request, $id)
     {        
         $pageTitle = "Encryption Success";
-        $submenu=['link'=>route('vangography.index'), 'title'=>"Vangonography"];
+        $submenu=['link'=>route('index'), 'title'=>"Quantumography"];
         $file=EncryptedFile::where('id', $id)->where('is_paid', '1')->first();
         if ($file) {
-            return view('vangography.success', compact('file', 'pageTitle','submenu'));
+            return view('quantumography.success', compact('file', 'pageTitle','submenu'));
         } else {
-            return redirect()->route('vangography.encode')->with("error", "File(s) not found. , Please try again.");
+            return redirect()->route('quantumography.encode')->with("error", "File(s) not found. , Please try again.");
         }
     }
     public function pricing(){
         $plans = VangographyPlan::all();
-        $pageTitle = "Vangonography Pricing Plan";
-        $submenu=['link'=>route('vangography.index'), 'title'=>"Vangonography"];
-        return view('vangography.plan.index',compact('plans','pageTitle','submenu'));
+        $pageTitle = "Quantumography Pricing Plan";
+        $submenu=['link'=>route('index'), 'title'=>"Quantumography"];
+        return view('quantumography.plan.index',compact('plans','pageTitle','submenu'));
     }
 }

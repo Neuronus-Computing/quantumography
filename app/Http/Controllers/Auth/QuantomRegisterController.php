@@ -30,7 +30,7 @@ class QuantomRegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = "/vangonography";
+    protected $redirectTo = "/";
     protected $externalAuthService;
     /**
      * Create a new controller instance.
@@ -86,7 +86,6 @@ class QuantomRegisterController extends Controller
                 'api_key' => 'pk_'.$api_key,
                 'secret_key' => 'sk_'.$secret_key,
             ]);
-            EnlargeImage::where('user_ip', request()->ip())->update(['user_id' => $user->id]);
             return redirect()->route('quantom.login')->with('success', 'Successfully registered with seed.');
         } else {
             return redirect()->route('quantom.register')->with('error' ,'External registration failed.');
@@ -108,7 +107,7 @@ class QuantomRegisterController extends Controller
     }
     protected function redirectIfAlreadyLogin()
     {
-        if (session()->has('url.intended') && strpos(session()->get('url.intended'), '/vangonography') !== false){
+        if (session()->has('url.intended') && strpos(session()->get('url.intended'), '/quantumography') !== false){
             redirect()->intended($this->redirectTo);
         }
         else{

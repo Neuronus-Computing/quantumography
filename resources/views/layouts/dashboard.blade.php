@@ -95,9 +95,9 @@
                                     </a>
                                 </li> 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('dashboard.vangography.plan.index') }}">
+                                    <a class="nav-link" href="{{ route('dashboard.quantumography.plan.index') }}">
                                         <div class="d-flex align-items-center">
-                                            <span class="nav-link-icon"><span class="fas fa-list"></span></span><span class="nav-link-text">Vangonography Plans</span>
+                                            <span class="nav-link-icon"><span class="fas fa-list"></span></span><span class="nav-link-text">Quantumography Plans</span>
                                         </div>
                                     </a>
                                 </li> 

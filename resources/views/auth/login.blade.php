@@ -1,9 +1,9 @@
 @php
 $layout = '';
 @endphp
-@if (session()->has('url.intended') && strpos(session()->get('url.intended'), '/vangonography') !== false)
+@if (session()->has('url.intended') && strpos(session()->get('url.intended'), '/quantumography') !== false)
     @php
-        $layout = 'vangography';
+        $layout = 'quantumography';
     @endphp
 @else
     @php

@@ -1,10 +1,10 @@
-@extends('layouts.vangography')
+@extends('layouts.quantumography')
 @section('javascript')
     @parent
     <script>
         var analyseUrlEncode = '{{ route('lsb_encode3channels') }}';
     </script>
-    <script src="{{ asset('js/vangography/lsb3channels.js') }}"  ></script>
+    <script src="{{ asset('js/quantumography/lsb3channels.js') }}"  ></script>
 @stop
 
 @section('content')

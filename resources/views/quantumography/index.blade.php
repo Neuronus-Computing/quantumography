@@ -1,4 +1,4 @@
-@extends('layouts.vangography')
+@extends('layouts.quantumography')
 @section('title', 'Vangography')
 @section('javascript')
     @parent
@@ -6,9 +6,9 @@
         var analyseUrlEncode = '{{ route('lsb_encode3channels') }}';
         var analyseUrlDecode = '{{ route('lsb_decode3channels') }}';
     </script>
-    <script src="{{ asset('js/vangography/lsb3channels.js') }}"></script>
-    <script src="{{ asset('js/vangography/animations.js') }}"></script>
-    <script src="{{ asset('js/vangography/lsb_decode_crypt.js') }}"></script>
+    <script src="{{ asset('js/quantumography/lsb3channels.js') }}"></script>
+    <script src="{{ asset('js/quantumography/animations.js') }}"></script>
+    <script src="{{ asset('js/quantumography/lsb_decode_crypt.js') }}"></script>
     @stop
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <link rel="stylesheet" href="{{ asset('assets/css/animations.css') }}">
@@ -1348,7 +1348,7 @@
             let token = getQueryParam('token');
             if (token) {
                 $.ajax({
-                    url: "vangonography/get-user-by-token",
+                    url: "quantumography/get-user-by-token",
                     type: "GET",
                     data: { token: token },
                     success: function (response) {

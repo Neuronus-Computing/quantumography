@@ -18,7 +18,7 @@ class SeedAuthenticate
     public function handle(Request $request, Closure $next)
     {
         if (!Auth::guard('seed')->check()) {
-            return redirect()->route('vangography.note');
+            return redirect()->route('quantumography.note');
         }
 
         return $next($request);

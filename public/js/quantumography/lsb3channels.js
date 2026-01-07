@@ -388,7 +388,7 @@ var Gallery = new Vue({
       } else {
         // Send token to server for payment processing
         this.$http
-          .post("/vangonography/process-payment", {
+          .post("/quantumography/process-payment", {
             payment_method: token.id,
             amount: self.plan.price, // Replace with the amount to pay
             name: self.name, // Replace with the user's name

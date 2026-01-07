@@ -1,6 +1,6 @@
 <!-- resources/views/plans.blade.php -->
 
-@extends('layouts.vangography') <!-- Assuming you have a layout file, adjust this according to your project -->
+@extends('layouts.quantumography') <!-- Assuming you have a layout file, adjust this according to your project -->
 @section('content')
 <div class="container mt-5 mb-5">
     <div class="row">
@@ -44,7 +44,7 @@
         @endforelse
     </div>
     <div class="col-12 mt-3">
-        <a href="{{ route('vangography.encode') }}" class="btn--base w-100">Go To Vangonography Encoder <i class="fas fa-arrow-right ml-2"></i></a>
+        <a href="{{ route('quantumography.encode') }}" class="btn--base w-100">Go To Quantumography Encoder <i class="fas fa-arrow-right ml-2"></i></a>
     </div>
 </div>
 @endsection

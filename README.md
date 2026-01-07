@@ -4,7 +4,7 @@
 > **Quantumography** is a secure Laravel web application that allows users to **hide (encrypt) any type of data inside an image** and later **extract (decrypt) it**, without visibly altering the image.
 
 🌐 Live Demo:  
-https://qa.neuronus.net/vangonography
+https://qa.neuronus.net/quantumography
 
 ---
 

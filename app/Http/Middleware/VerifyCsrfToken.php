@@ -12,6 +12,6 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        'upload-file','vangonography_encode','vangonography_decode','vangonography/login','vangonography/login-or-register','vangonography/get-user-by-token'
+        'upload-file','quantumography_encode','quantumography_decode','quantumography/login','quantumography/login-or-register','quantumography/get-user-by-token'
     ];
 }
